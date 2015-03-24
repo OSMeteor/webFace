@@ -52,7 +52,7 @@ html5shiv
 
 git use
 git init
-git add --a
+git add --a [git add .]
 git commit -m "first commit"
-git remote add origin https://github.com/XXX(username)/YYYY(projectname).git
-git push -u origin master
+git remote add origin xx.git
+git push -u  master
