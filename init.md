@@ -41,15 +41,16 @@ ___
 ____
 
 布局：
+>
 html>head>meta+link:css+link:favicon>body>(header+(.navbar>nav)+.container+footer)+script:src
 header+nav+(section>(header+article))+aside+footer
-
+>
 header.header+(nav.nav>(div))+(section.section>(header+article))+aside.aside+footer.footer
 d3  图标数据
 html5shiv
-
+>
 angular-route-styles
-
+>
 gulp-angular-templatecache
 gulp-amd-optimizer
 git use
