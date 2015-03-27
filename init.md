@@ -48,8 +48,10 @@ header.header+(nav.nav>(div))+(section.section>(header+article))+aside.aside+foo
 d3  图标数据
 html5shiv
 
+angular-route-styles
 
-
+gulp-angular-templatecache
+gulp-amd-optimizer
 git use
 git init
 git add --a [git add .]
