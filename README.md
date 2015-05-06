@@ -1,6 +1,6 @@
 #runtime environment
 nodejs >>
-[www.nodejs.org](url)
+<http://www.nodejs.org>
 
 # webFace
 webFaceArchitecture
