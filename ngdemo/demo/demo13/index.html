@@ -1,0 +1,19 @@
+
+<html lang="en" ng-app="ezstuff">
+    <head>
+        <!--<script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.min.js"></script>-->
+
+    </head>
+    <body>
+    <form name="myForm" ng-controller="ExampleController">
+        <input type="radio" ng-model="color.name"   ng-value="true">  Red <br/>
+        <input type="radio" ng-model="color.name" ng-value="specialValue"> Green <br/>
+        <input type="radio" ng-model="color.name" value="blue"> Blue <br/>
+        <tt>color = {{color.name | json}}</tt><br/>
+    </form>
+    Note that `ng-value="specialValue"` sets radio item's value to be the value of `$scope.specialValue`.
+    <script src="../../lib/angular.js"></script>
+    <script src="script.js"></script>
+    </body>
+    </html>
+

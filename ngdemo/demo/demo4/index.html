@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <script src="../../lib/angular.js"></script>
+    <script src="script.js"></script>
+    <style>
+        .show-scope .doc-example-live.ng-scope,
+        .show-scope .doc-example-live .ng-scope  {
+            border: 1px solid red;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="GreetCtrl">
+    Hello {{name}}!
+</div>
+<div ng-controller="ListCtrl">
+    <ol>
+        <li ng-repeat="name in names">{{name}}</li>
+    </ol>
+</div>
+</body>
+</html>

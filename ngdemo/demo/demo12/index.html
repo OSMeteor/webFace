@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css">-->
+    <script src="../../lib/lodash.js"></script>
+    <script src="../../lib/angular.js"></script>
+    <script src="../../lib/angular-route.js"></script>
+
+    <script src="../../lib/restangular.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>-->
+    <!--<script src="http://code.angularjs.org/1.2.4/angular-route.js"></script>-->
+    <!--<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>-->
+    <!--<script type="text/javascript" src="restangular.js"></script>-->
+    <script src="app.js"></script>
+</head>
+
+<body>
+<div ng-app="project">
+    <h2><a target="_blank" href="https://github.com/mgonto/restangular">Restangular Example. Click here to check out the library</a></h2>
+    <h2>JavaScript Projects. <a href="http://angularjs.org/#wire-up-a-backend" target="_blank">Based on AngularJS's sample</a></h2>
+    <div ng-view></div>
+    <!-- CACHE FILE: list.html -->
+    <script type="text/ng-template" id="list.html">
+        <input type="text" ng-model="search" class="search-query" placeholder="Search">
+        <table>
+            <thead>
+            <tr>
+                <th>Project</th>
+                <th>Description</th>
+                <th><a href="#/new"><i class="icon-plus-sign"></i></a></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="project in projects | filter:search | orderBy:'name'" ng-show="project._id.$oid">
+                <td><a href="{{project.site}}" target="_blank">{{project.name}}</a></td>
+                <td>{{project.description}}</td>
+                <td>
+                    <a href="#/edit/{{project._id.$oid}}"><i class="icon-pencil"></i></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </script>
+
+
+
+    <!-- CACHE FILE: detail.html -->
+    <script type="text/ng-template" id="detail.html">
+        <form name="myForm">
+            <div class="control-group" ng-class="{error: myForm.name.$invalid}">
+                <label>Name</label>
+                <input type="text" name="name" ng-model="project.name" required>
+          <span ng-show="myForm.name.$error.required" class="help-inline">
+              Required</span>
+            </div>
+
+            <div class="control-group" ng-class="{error: myForm.site.$invalid}">
+                <label>Website</label>
+                <input type="url" name="site" ng-model="project.site" required>
+          <span ng-show="myForm.site.$error.required" class="help-inline">
+              Required</span>
+          <span ng-show="myForm.site.$error.url" class="help-inline">
+              Not a URL</span>
+            </div>
+
+            <label>Description</label>
+            <textarea name="description" ng-model="project.description"></textarea>
+
+            <br>
+            <a href="#/" class="btn">Cancel</a>
+            <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid"
+                    class="btn btn-primary">Save</button>
+            <button ng-click="destroy()"
+                    ng-show="project._id" class="btn btn-danger">Delete</button>
+        </form>
+    </script>
+</div>
+
+</body>
+
+</html>

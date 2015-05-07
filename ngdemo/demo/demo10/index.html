@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>子父控制器传值通过事件</title>
+    <script src="../../lib/angular.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="App1" ng-app="shoppingCart" ng-controller="ShoppingCartController">
+    <h1>Your demo</h1>
+    <!-- demo 1 -->
+    <div ng-show='menuState.show'>another another another</div>
+    <button ng-click="test2()">切换</button>
+
+    <hr><!-- demo 2 -->
+    <style type="text/css">
+        .menu-disabled-true{
+            opacity:1;
+            color: red;
+            -webkit-transition:all 1000ms linear;
+            -moz-transition:all 1000ms linear;
+            -o-transition:all 1000ms linear;
+        }
+        .menu-disabled-false{
+            opacity: 0;
+            -webkit-transition:all 1000ms linear;
+            -moz-transition:all 1000ms linear;
+            -o-transition:all 1000ms linear;
+        }
+    </style>
+    <div class="menu-disabled-{{isDisabled}}">adfadfadasda</div>
+    <button ng-click="test()">隐藏</button>
+    <button ng-click="test1()">显示</button>
+    <button ng-click="test11()">切换</button>
+
+    <hr><!-- demo 3 -->
+    <style type="text/css">
+        .error {
+            background-color: red;
+        }
+        .warning {
+            background-color: yellow;
+        }
+    </style>
+    <!--ng-class='{error:isError, warning:isWarning}'-->
+    <div  style="{{isError}}">{{messageText}}</div>
+    <button ng-click="showError()">error</button>
+    <button ng-click="showWarning()">warning</button>
+
+    <hr><!-- demo 4 -->
+    <style type="text/css">
+        .selected{
+            background-color: lightgreen;
+        }
+    </style>
+    <div ng-repeat="item in items" ng-class='{selected:$index==selectedRow}' ng-click='selectedWhich($index)'>
+        <span>{{item.product_name}}</span>
+        <span>{{item.price | currency}}</span>
+    </div>
+</div>
+</body>
+</html>

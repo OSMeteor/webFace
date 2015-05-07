@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular服务的方式 传值</title>
+    <script src="../../lib/angular.js"></script>
+    <script src="./script3.js"></script>
+</head>
+<body>
+<div ng-app="app">
+    <div ng-controller="MainCtrl">
+        <input type="text" ng-model="test" ng-change="change()"/>
+
+        <!--<div ng-click="change()">click me</div>-->
+    </div>
+    <div ng-controller="sideCtrl">
+        <div ng-click="add()">my name {{name}}</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+<html ng-app="ezstuff">
+    <head>
+        <!--<script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.min.js"></script>-->
+
+    </head>
+    <body>
+    <div ng-controller="ezController">
+        <button ng-click="vm.shuffle();">shuffle</button>
+        <button ng-click="click.shuffle();">shuffle</button>
+        <div>name : {{vm.sb.name}}</div>
+        <div>gender : {{vm.sb.gender}}</div>
+        <div>age : {{vm.sb.age}}</div>
+        <div>career : {{vm.sb.career}}</div>
+        <div><img ng-src="{{vm.sb.photo}}"></div>
+    </div>
+    <script src="../../lib/angular.js"></script>
+    <script src="script.js"></script>
+    </body>
+    </html>
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>$rootScope传值</title>
+    <script src="../../lib/angular.js"></script>
+    <script src="./script2.js"></script>
+</head>
+<body>
+<div ng-app="app" ng-controller="parendCtrl">
+        <div ng-controller="child1Ctrl">
+            <p>Location: {{location}}</p>
+            <button ng-click="recall(location)">Recall</button>
+        </div>
+        <div ng-controller="child2Ctrl">
+            <input ng-model="rootLocation" ng-change="change(rootLocation);" placeholder=" in  rootLocation"/>
+            <p>Location: {{rootLocation}}</p>
+        </div>
+</div>
+</body>
+</html>

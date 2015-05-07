@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>子父控制器传值通过事件</title>
+    <script src="../../lib/angular.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div ng-app="app" ng-controller="parentCtr">
+
+    <lable>parentCtr:  </lable><input ng-model="parentCtrname" type="text"  />
+      <div ng-controller="childCtr1">name :
+          <input ng-model="name" type="text"  />
+        </div>
+        <div ng-controller="childCtr2">Ctr1 name:
+            <input ng-model="ctr1Name" ng-change="change(ctr1Name);"  placeholder="请在这里输入文字传递给子父控制器"/>
+        </div>
+
+
+      </div>
+</body>
+</html>

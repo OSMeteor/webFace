@@ -1,0 +1,5 @@
+.show-scope .doc-example-live.ng-scope,
+.show-scope .doc-example-live .ng-scope  {
+    border: 1px solid red;
+    margin: 3px;
+}

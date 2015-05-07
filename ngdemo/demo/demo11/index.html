@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.js"></script>
+</head>
+<body>
+<form role="form" name="FormName" novalidate>
+    <ul>
+        <il> <input type="number"  name="number" ng-model="timerInterval" placeholder="请输入3-6的整数"  required min="3" max="10"/>
+            <div  ng-show="FormName.number.$error.required">不能为空！</div>
+            <div  ng-show="FormName.number.$error.number">not number</div>
+            <div ng-show="FormName.number.$error.min || FormName.number.$error.max"> 输入值必须在3-6之间!</div>
+            是否为空： {{FormName.number.$error.required}}<br/>
+            是否number: {{FormName.number.$error.number}}<br/>
+            最小值 min: {{FormName.number.$error.min}}<br/>
+            最大值 max:{{FormName.number.$error.max}}<br/>
+        </il>
+        <il>
+            ng-maxlength
+            <input type="number"  name="numberlength" ng-model="timerInterval" placeholder="请输入3-6的整数"  required ng-maxlength="10" ng-minlength="3"/>
+            <div  ng-show="FormName.numberlength.$error.required">不能为空！</div>
+            <div  ng-show="FormName.numberlength.$error.number">not number</div>
+            <div ng-show="FormName.numberlength.$error.min || FormName.numberlength.$error.max"> 输入值必须在3-6之间!</div>
+            是否为空： {{FormName.numberlength.$error.required}}<br/>
+            是否number: {{FormName.numberlength.$error.number}}<br/>
+            最小值 min: {{FormName.numberlength.$error.minlength}}<br/>
+            最大值 max:{{FormName.numberlength.$error.maxlength}}<br/>
+        </il>
+        <il>
+            pattern
+            <input type="text" name="pattern" ng-model="pattern" required ng-pattern="/[a-zA-Z]/"  placeholder="a-z&A-Z" />
+            <div  ng-show="FormName.pattern.$error.required">not null！</div>
+            <div  ng-show="FormName.pattern.$error.pattern">pattern！</div>
+            pattern: {{FormName.pattern.$error.pattern}}<br/>
+        </il>
+        <il>
+            pattern
+            <input type="email" name="email" ng-model="email" required />
+            <div  ng-show="FormName.email.$error.required">not null！</div>
+            <div  ng-show="FormName.email.$error.email">!! email</div>
+            pattern: {{FormName.email.$error.email}}<br/>
+        </il>
+        <il></il>
+        <il></il>
+        <il></il>
+        <il></il>
+        <il></il>
+        <il></il>
+    </ul>
+</form>
+</body>
+</html>
