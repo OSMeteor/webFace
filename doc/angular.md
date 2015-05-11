@@ -1,3 +1,22 @@
+##tools
+#####Firefox: 
+ * ReloadEvery
+ * AngScope 
+ * Firebug 
+ * JetBarains Firefox extension 
+ * Measurelt
+ * PDF Download  
+ * Github Extension Installer
+
+##### Chrome
+* AngularJS Batarang
+* GitHub Linker
+* JetBrains IDE Support
+* Proxy SwitchSharp
+
+
+##pakage
+ 
  
     "lesshat": "~3.0.2",
     "html5shiv": "~3.7.2",

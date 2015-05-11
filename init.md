@@ -31,7 +31,10 @@ ____
     "src/views/template",
     "dist",
     "doc",
-    "test"
+    "test",
+    "test/",
+    "test/e2e",
+    "test/unit"
     
 ___
 
