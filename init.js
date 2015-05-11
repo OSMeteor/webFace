@@ -17,7 +17,9 @@ var fileArray=[
     "src/views/template",
     "dist",
     "doc",
-    "test"
+    "test",
+    "test/e2e",
+    "test/unit"
     //,"gulp/node_modules"
 ];
 var glupArray=[
