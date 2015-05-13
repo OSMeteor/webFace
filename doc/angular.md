@@ -1,4 +1,22 @@
 ##tools
+#### version
+* TortoiseGit  mysgit
+* 
+
+#### Tools
+* karma-coverage
+* Jasmine 
+* Jenkins Toast
+* PhantomJS
+* fping 网络工具 iptables & NetFilter  &   npma 
+* SecureCRT
+* [tunnel](http://www.tunnel.mobi/)
+* 
+
+#### tags
+* [kissy Gallery](http://ued.taobao.org/blog/category/bowen/frontend/)
+
+
 #####Firefox: 
  * ReloadEvery
  * AngScope 
@@ -7,12 +25,34 @@
  * Measurelt
  * PDF Download  
  * Github Extension Installer
+ * ColorPicker
 
 ##### Chrome
 * AngularJS Batarang
 * GitHub Linker
 * JetBrains IDE Support
 * Proxy SwitchSharp
+
+#### AngularJS
+* Protractor 基于 WebDriver
+* http-server
+
+
+#### Angular
+* angular-sanitize 过滤html
+* angular-animate
+* angular-growl 消息提醒
+* angular-base64
+* angular-translate 多语言
+* angular-cookies
+* html2js
+* bindonce
+
+####Nodejs 
+* heapdump 查看堆内存
+* fekit 
+* Node-Webkit | appjs | musicquiz | Log.io | [Ghost](https://ghost.org/) | Express.js | gulp | Nodecast | Hyro PDFKit  | Haroopad | NoduinoWeb | Filsh | Forever | NodeOS | Imdex 
+
 
 
 ##pakage
